@@ -12593,6 +12593,11 @@ threebox-plugin@^2.2.4:
   resolved "https://registry.yarnpkg.com/threebox-plugin/-/threebox-plugin-2.2.4.tgz#4e09d93107c77f1b75908881ade7186fa4c28e3d"
   integrity sha512-+XnDuajzIPluVpdmDo3qd1zxOFHJ/H+Xhl0HPBzOcM6kCIoF0ZM4CakYe7JOPODlrJinINdb6ihMjUhVA+TaxA==
 
+threebox@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/threebox/-/threebox-0.1.5.tgz#b445fd5dd85d440b6def8a324a4cc4e8f0259262"
+  integrity sha1-tEX9XdhdRAtt74oySkzE6PAlkmI=
+
 throat@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"

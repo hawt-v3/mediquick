@@ -13,18 +13,7 @@ import { MissionsDisplay } from "../Components/MissionsDisplay";
 import { QueueDisplay } from "../Components/QueueDisplay";
 import theme from "../theme";
 import Maps from '../Components/Map/index'
-import { loadLocations } from '../Components/Map/located';
 import { getShelters } from '../Shelter';
-
-//const locations = [{ lat: 32.76570649214452, long: -117.06651266267941 }, {lat: 32.7657064921445, long: -117.0665126626796, }]
-let locations = {};
-
-const mapLoad = map => {
-    setTimeout(() => {
-      window.map = map;
-      loadLocations(map, locations);
-    }, 2000);
-  }; 
 
 const Dashboard = () => {
   const [missions, setMissions] = useState([]);

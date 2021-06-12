@@ -1,4 +1,5 @@
-import ReactMapboxGl from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl';
+//import MapPin from './mapPin'
 import './style.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -31,6 +32,21 @@ const Maps = (props) => {
       style="mapbox://styles/mapbox/light-v10"
       zoom = {[16]}
     >
+      <Marker
+            coordinates={[user.long, user.lat]}
+            anchor="bottom"
+            offset={[400, -window.innerHeight * .915]}
+            onClick={() => {
+              console.log('CALLING')
+              props.setCall(user.long, user.lat);
+            }}
+          >
+            <CustomMarker
+              id={user.caseId}
+              status={user.status}
+            />
+          </Marker>
+      
     </Map>
     );
   }
