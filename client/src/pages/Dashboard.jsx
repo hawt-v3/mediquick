@@ -10,21 +10,9 @@ import {
 import { useEffect, useState } from "react"
 import { Layout } from "../Components/Layout"
 import Maps from "../Components/Map/index"
-import { loadMap } from "../Components/Map/located"
 import { MissionsDisplay } from "../Components/MissionsDisplay"
 import { QueueDisplay } from "../Components/QueueDisplay"
-import { getShelters } from "../Shelter"
 import theme from "../theme"
-
-//const locations = [{ lat: 32.76570649214452, long: -117.06651266267941 }, {lat: 32.7657064921445, long: -117.0665126626796, }]
-let locations = {}
-
-const mapLoad = map => {
-	setTimeout(() => {
-		window.map = map
-		loadMap(map, locations)
-	}, 2000)
-}
 
 const Dashboard = () => {
 	const [missions, setMissions] = useState([])
@@ -135,7 +123,7 @@ const Dashboard = () => {
 					boxShadow="0px 2px 6px -1px gray"
 					borderRadius="xl"
 					p="2rem">
-					<Maps mapLoad={mapLoad} />
+					<Maps />
 				</Box>
 			</Box>
 		</Layout>
