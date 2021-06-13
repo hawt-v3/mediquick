@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "319186040661",
+    "project_id": "mediquick-hawt",
+    "storage_bucket": "mediquick-hawt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319186040661:android:981eb53aa3cacb0cbc61dc",
+        "android_client_info": {
+          "package_name": "com.mediquick.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319186040661-oeir3fev2lkdf661v0sk1q2r2mvdrrqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZY1nl3w4w2Wqr0ZZnCyjbp0Ie-9T60SQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319186040661-oeir3fev2lkdf661v0sk1q2r2mvdrrqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
