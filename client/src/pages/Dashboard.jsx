@@ -1,20 +1,5 @@
 import { Box } from "@chakra-ui/layout"
 import {
-<<<<<<< HEAD
-  Heading,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-} from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import { Layout } from "../Components/Layout";
-import { MissionsDisplay } from "../Components/MissionsDisplay";
-import { QueueDisplay } from "../Components/QueueDisplay";
-import theme from "../theme";
-import Maps from '../Components/Map/index'
-=======
 	Heading,
 	Tab,
 	TabList,
@@ -28,7 +13,6 @@ import Maps from "../Components/Map/index"
 import { MissionsDisplay } from "../Components/MissionsDisplay"
 import { QueueDisplay } from "../Components/QueueDisplay"
 import theme from "../theme"
->>>>>>> a42c931acc584647863113acca4e6eed58c378f3
 
 const Dashboard = () => {
 	const [missions, setMissions] = useState([])

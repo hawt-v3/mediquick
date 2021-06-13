@@ -5,9 +5,7 @@ import markerUrl from "../../assets/flag-3d-icon-small.webp"
 import Truck from '../../assets/ambulance-3d-icon-small.webp';
 
 const Maps = () => {
-  const markDate = [{
-    "properties": { "NAME": "Bearbrook Skateboard Park", "DESCRIPTIO": "Flat asphalt surface, 5 components", "PARK_ID": 960 }, "geometry": { "coordinates": [-117.06651266267941, 32.76570649214452] }
-  }]
+
   const Map = ReactMapboxGl({
     accessToken: (process.env.REACT_APP_MAPBOX_TOKEN)
   })
@@ -50,4 +48,51 @@ const Maps = () => {
     </div>
     );
   }
-export default Maps;
+export default Maps; 
+/*import markerUrl from "../../assets/flag-3d-icon-small.webp"
+import Truck from '../../assets/ambulance-3d-icon-small.webp';
+import { useState, useEffect } from "react";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
+export default function Maps() {
+  const [viewport, setViewport] = useState({
+    latitude: 45.4211,
+    longitude: -75.6903,
+    width: "100vw",
+    height: "100vh",
+    zoom: 10
+  });
+
+  return(
+    <div>
+      <ReactMapGL
+        {...viewport}
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+        mapStyle="mapbox://styles/leighhalliday/cjufmjn1r2kic1fl9wxg7u1l4"
+        onViewportChange={viewport => {
+          setViewport(viewport);
+        }}
+      >
+<Marker
+
+latitude={45.4211}
+longitude={-75.6903}
+>
+<img src={markerUrl} alt="..." />
+</Marker>
+<Marker
+
+latitude={45.42}
+longitude={-75.69}
+>
+<img src={Truck} alt=".." />
+</Marker>
+          
+
+      </ReactMapGL>
+    </div>
+  );
+} */
