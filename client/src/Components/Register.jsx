@@ -95,7 +95,7 @@ const Register = () => {
 				alignItems="center"
 				h="80vh"
 			>
-				<Heading mb={10} color={theme.colours.hexAccent}>
+				<Heading mb={10} >
 					Register
 				</Heading>
 				<Box width={["80%", "80%", "60%", "30%"]}>
@@ -141,7 +141,7 @@ const Register = () => {
 							/>
 						</FormControl>
 						<Text mb="3">
-							Don't have an account?{" "}
+							Already have an account?{" "}
 							<Link
 								color={theme.colours.hexAccent}
 								as={RouterLink}
@@ -157,6 +157,8 @@ const Register = () => {
 							px={10}
 							py={6}
 							type="submit"
+							bgGradient="linear(to-r, red.400,purple.500, blue.400)"
+							_hover={{ bgGradient: "linear(to-r, red.500,purple.600, blue.500)" }}
 						>
 							Register
 						</Button>

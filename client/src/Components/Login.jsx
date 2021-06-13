@@ -76,7 +76,7 @@ const Login = () => {
 				alignItems="center"
 				h="80vh"
 			>
-				<Heading mb={10} color={theme.colours.hexAccent}>
+				<Heading mb={10} >
 					Log in
 				</Heading>
 				<Box width={["80%", "80%", "60%", "30%"]}>
@@ -114,20 +114,25 @@ const Login = () => {
 						<Text mb="3">
 							Don't have an account?{" "}
 							<Link
-								color={theme.colours.hexAccent}
+								bgClip="text"
+								bgGradient="linear(to-r, red.400,purple.500, blue.400)"
+
 								as={RouterLink}
 								to="/register"
 								mb={3}
+								
 							>
 								Sign Up
 							</Link>
 						</Text>
 						<Button
-							colorScheme={theme.colours.accent}
-							bgGradient={theme.gradients.default}
+							
+							color="white"
 							px={10}
 							py={6}
 							type="submit"
+							bgGradient="linear(to-r, red.400,purple.500, blue.400)"
+							_hover={{ bgGradient: "linear(to-r, red.500,purple.600, blue.500)" }}
 						>
 							Log in
 						</Button>

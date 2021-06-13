@@ -4,7 +4,7 @@ const colours = {
 	black: "black",
 	hexBlack: "#000500",
 
-	accent: "red",
+	accent: "purple",
 	hexAccent: "red.400",
 
 	highlight1: "#7F534B",

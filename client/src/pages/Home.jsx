@@ -34,17 +34,7 @@ import {
                                   
                 as={'span'}
                 position={'relative'}
-                _after={{
-                  content: "''",
-                  width: 'full',
-                  height: '30%',
-                  position: 'absolute',
-                  bottom: 1,
-                    left: 0,
-                  
-                  bgGradient: "linear(to-r, red.400,purple.500, blue.400)",
-                  zIndex: -1,
-                }}>
+                >
                 Mediquick
               </Text>
               <br />
@@ -71,7 +61,7 @@ import {
                 colorScheme={'red'}
                 bgGradient="linear(to-r, red.400,purple.500, blue.400)"
                                   boxShadow={'2xl'}
-                _hover={{ bg: 'red.500' }}>
+                _hover={{ bgGradient: "linear(to-r, red.500,purple.600, blue.500)" }}>
                 Get started
               </Button>
               <Button

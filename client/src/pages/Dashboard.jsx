@@ -1,18 +1,18 @@
 import { Box } from "@chakra-ui/layout"
 import {
-	Heading,
-	Tab,
-	TabList,
-	TabPanel,
-	TabPanels,
-	Tabs,
-} from "@chakra-ui/react"
-import { useEffect, useState } from "react"
-import { Layout } from "../Components/Layout"
-import Maps from "../Components/Map/index"
-import { MissionsDisplay } from "../Components/MissionsDisplay"
-import { QueueDisplay } from "../Components/QueueDisplay"
-import theme from "../theme"
+  Heading,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { Layout } from "../Components/Layout";
+import { MissionsDisplay } from "../Components/MissionsDisplay";
+import { QueueDisplay } from "../Components/QueueDisplay";
+import theme from "../theme";
+import Maps from '../Components/Map/index'
 
 const Dashboard = () => {
 	const [missions, setMissions] = useState([])
@@ -119,7 +119,7 @@ const Dashboard = () => {
 				<Box
 					w="100%"
 					h="100%"
-					backgroundColor={theme.colours.white}
+					
 					boxShadow="0px 2px 6px -1px gray"
 					borderRadius="xl"
 					p="2rem">
