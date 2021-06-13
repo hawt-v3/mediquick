@@ -1,16 +1,20 @@
-import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl';
-//import MapPin from './mapPin'
+import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import './style.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import markerUrl from "../../assets/flag-3d-icon-small.webp"
+import Truck from '../../assets/ambulance-3d-icon-small.webp';
 
-const Map = ReactMapboxGl({
-  accessToken: process.env.REACT_APP_MAPBOX_TOKEN,
-});
-
-const Maps = (props) => {
+const Maps = () => {
+  const markDate = [{
+    "properties": { "NAME": "Bearbrook Skateboard Park", "DESCRIPTIO": "Flat asphalt surface, 5 components", "PARK_ID": 960 }, "geometry": { "coordinates": [-117.06651266267941, 32.76570649214452] }
+  }]
+  const Map = ReactMapboxGl({
+    accessToken: (process.env.REACT_APP_MAPBOX_TOKEN)
+  })
+  
   return (
+    <div>
     <Map
-      antialias={true}
       containerStyle={{
         height: '70vh',
         width: '66%',
@@ -20,34 +24,30 @@ const Maps = (props) => {
         transition: '.5s',
         overflow: 'hidden',
         borderRadius: '15px',
-        bearingL: 0
       }}
       center={[-117.06651266267941, 32.76570649214452]}
       flyToOptions={{
         speed: 2
         }}
-      onClick={props.mapClick}
-      onStyleLoad={props.mapLoad}
       pitch = {[60]}
       style="mapbox://styles/mapbox/light-v10"
       zoom = {[16]}
-    >
-      <Marker
-            coordinates={[user.long, user.lat]}
-            anchor="bottom"
-            offset={[400, -window.innerHeight * .915]}
-            onClick={() => {
-              console.log('CALLING')
-              props.setCall(user.long, user.lat);
-            }}
+      >
+        <Marker
+
+            coordinates={[-117.06651266267941, 32.76570649214452]}
           >
-            <CustomMarker
-              id={user.caseId}
-              status={user.status}
-            />
-          </Marker>
+            <img src={markerUrl} alt="..." />
+        </Marker>
+        <Marker
       
+            coordinates={[-117.0665126, 32.765706]}
+          >
+            <img src={Truck} alt=".." />
+          </Marker>
+        }
     </Map>
+    </div>
     );
   }
 export default Maps;
