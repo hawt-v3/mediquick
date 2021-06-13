@@ -3,7 +3,7 @@ import './style.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import markerUrl from "../../assets/flag-3d-icon-small.webp"
 import Truck from '../../assets/ambulance-3d-icon-small.webp';
-import * as parkDate from "./data/data.json";
+import * as missionList from "./data/data.json";
 
 
 
@@ -38,9 +38,9 @@ const Maps = () => {
       style="mapbox://styles/mapbox/light-v10"
       zoom = {[16]}
       >
-    {parkDate.features.map(park => (
+    {missionList.features.map(mission => (
         <Marker
-          coordinates={[park.geometry.coordinates[1], park.geometry.coordinates[0]]}
+          coordinates={[mission.geometry.coordinates[1], mission.geometry.coordinates[0]]}
         >
           <img src={markerUrl} alt="..." className="photo" />
 
