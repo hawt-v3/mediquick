@@ -3,6 +3,9 @@ import './style.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import markerUrl from "../../assets/flag-3d-icon-small.webp"
 import Truck from '../../assets/ambulance-3d-icon-small.webp';
+import * as parkDate from "./data/data.json";
+
+
 
 const Maps = () => {
   const markDate = [{
@@ -11,6 +14,8 @@ const Maps = () => {
   const Map = ReactMapboxGl({
     accessToken: (process.env.REACT_APP_MAPBOX_TOKEN)
   })
+
+
   
   return (
     <div>
@@ -25,7 +30,7 @@ const Maps = () => {
         overflow: 'hidden',
         borderRadius: '15px',
       }}
-      center={[-117.06651266267941, 32.76570649214452]}
+      center={[-71.500000, 44.000000]}
       flyToOptions={{
         speed: 2
         }}
@@ -33,19 +38,14 @@ const Maps = () => {
       style="mapbox://styles/mapbox/light-v10"
       zoom = {[16]}
       >
+    {parkDate.features.map(park => (
         <Marker
+          coordinates={[park.geometry.coordinates[1], park.geometry.coordinates[0]]}
+        >
+          <img src={markerUrl} alt="..." className="photo" />
 
-            coordinates={[-117.06651266267941, 32.76570649214452]}
-          >
-            <img src={markerUrl} alt="..." />
         </Marker>
-        <Marker
-      
-            coordinates={[-117.0665126, 32.765706]}
-          >
-            <img src={Truck} alt=".." />
-          </Marker>
-        }
+      ))}
     </Map>
     </div>
     );
